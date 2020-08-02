@@ -2,7 +2,7 @@
 
 ## Configuration
 
-Update your database connection details on the file connection_details.csv located on the folder **2. Pentaho ETL\db_configuration**. You should specify hostname, database name, connection port, username and password for both your transactional and DW databases.
+Update your database connection details on the file **connection_details.csv** located on the folder **2. Pentaho ETL\db_configuration**. You should specify hostname, database name, connection port, username and password for both your transactional and DW databases.
 
 ## Deployment
 
