@@ -7,6 +7,7 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
+
 -- -----------------------------------------------------
 -- Schema `ciat_dw`
 -- -----------------------------------------------------
@@ -92,9 +93,9 @@ CREATE TABLE IF NOT EXISTS `ciat_dw`.`dm_time` (
   `tme_description` VARCHAR(50) CHARACTER SET 'utf8' COLLATE 'utf8_general_ci' NULL,
   `tme_weekday_num` SMALLINT(1) NULL,
   `tme_weekday_name` VARCHAR(50) CHARACTER SET 'utf8' COLLATE 'utf8_general_ci' NULL,
-  `tme_monthday_num` SMALLINT(2) NULL,
   `tme_month_num` SMALLINT(2) NULL,
-  `tme_month_name` VARCHAR(50) NULL,
+  `tme_month_name` VARCHAR(50) CHARACTER SET 'utf8' COLLATE 'utf8_general_ci' NULL,
+  `tme_monthday_num` SMALLINT(2) NULL,
   `tme_quarter_num` SMALLINT(1) NULL,
   `tme_year` INT(4) NULL,
   `tme_is_weekend` TINYINT(1) NULL,
@@ -109,8 +110,8 @@ CREATE TABLE IF NOT EXISTS `ciat_dw`.`fact_policies` (
   `plc_spk` INT(8) NOT NULL AUTO_INCREMENT,
   `plc_id` BIGINT(20) NOT NULL,
   `plc_year` BIGINT(5) NULL,
-  `plc_title` TEXT NULL,
-  `plc_description` TEXT NULL,
+  `plc_title` TEXT CHARACTER SET 'utf8' COLLATE 'utf8_general_ci' NULL,
+  `plc_description` TEXT CHARACTER SET 'utf8' COLLATE 'utf8_general_ci' NULL,
   `plc_id_phase` BIGINT(20) NULL,
   `plc_is_active` TINYINT(1) NULL,
   `tme_spk` INT(8) NULL,
